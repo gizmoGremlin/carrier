@@ -56,13 +56,12 @@ export function Hero() {
             initial={reduce ? false : { opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.05 }}
-            className="display mt-6 text-[2.85rem] sm:text-6xl lg:text-[5rem]"
+            className="display mt-6 text-[2.6rem] sm:text-6xl lg:text-[4.5rem]"
           >
-            The carrier
+            The carrier that
             <br />
-            that{" "}
             <span className="relative inline-block italic text-brand">
-              answers.
+              handles it.
               <svg
                 className="absolute -bottom-2 left-0 w-full"
                 viewBox="0 0 300 12"
