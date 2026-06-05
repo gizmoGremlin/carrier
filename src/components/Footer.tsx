@@ -23,7 +23,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.4fr_repeat(3,1fr)]">
           <div>
             <Wordmark />
-            <p className="mt-4 max-w-xs text-base leading-relaxed text-muted">
+            <p className="mt-4 max-w-xs text-base leading-snug text-muted">
               The first AI-native phone carrier. Spam blocked, calls answered,
               every conversation summarized — for less than you pay today.
             </p>

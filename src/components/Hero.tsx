@@ -84,7 +84,7 @@ export function Hero() {
             initial={reduce ? false : { opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.12 }}
-            className="mx-auto mt-7 max-w-xl text-2xl leading-relaxed text-muted lg:mx-0"
+            className="mx-auto mt-7 max-w-xl text-2xl leading-snug text-muted lg:mx-0"
           >
             Switch to an AI-first phone plan that screens, answers, and
             summarizes every call for you — and works harder than any carrier

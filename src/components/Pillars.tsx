@@ -59,7 +59,7 @@ export function Pillars() {
               <h3 className="display-sm relative mt-6 text-3xl sm:text-4xl">
                 Blocks spam before it rings
               </h3>
-              <p className="relative mt-3 max-w-sm leading-relaxed text-white/70">
+              <p className="relative mt-3 max-w-sm leading-snug text-white/70">
                 Our AI screens and handles spam callers automatically — your
                 phone stays silent so you stay focused.
               </p>
@@ -89,7 +89,7 @@ export function Pillars() {
                   {c.title}
                 </h3>
                 <p
-                  className="mt-3 leading-relaxed text-muted"
+                  className="mt-3 leading-snug text-muted"
                   dangerouslySetInnerHTML={{ __html: c.body }}
                 />
               </article>

@@ -68,7 +68,7 @@ export function Testimonials() {
                   </div>
                 </div>
                 <Stars />
-                <blockquote className="mt-4 leading-relaxed text-ink-soft">
+                <blockquote className="mt-4 leading-snug text-ink-soft">
                   “{r.quote}”
                 </blockquote>
               </figure>

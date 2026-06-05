@@ -128,7 +128,7 @@ export function HowItWorks() {
                 {step.title}
               </h3>
               <p
-                className="mt-4 text-xl leading-relaxed text-white/65"
+                className="mt-4 text-xl leading-snug text-white/65"
                 dangerouslySetInnerHTML={{ __html: step.body }}
               />
               <ul className="mt-7 space-y-3">

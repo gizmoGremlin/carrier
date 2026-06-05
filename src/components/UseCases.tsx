@@ -43,7 +43,7 @@ export function UseCases() {
               <h3 className="display-sm mt-6 text-3xl text-ink sm:text-[2.4rem]">
                 Stay connected to who matters
               </h3>
-              <p className="mt-3 text-xl leading-relaxed text-muted">
+              <p className="mt-3 text-xl leading-snug text-muted">
                 Stop spam, screen the unknown, and handle calls on your schedule.
                 Your AI keeps you on top of follow-ups so you never drop a thread.
               </p>
@@ -85,7 +85,7 @@ export function UseCases() {
               <h3 className="display-sm relative mt-6 text-3xl text-white sm:text-[2.4rem]">
                 Never lose a lead again
               </h3>
-              <p className="relative mt-3 text-xl leading-relaxed text-white/70">
+              <p className="relative mt-3 text-xl leading-snug text-white/70">
                 Your AI receptionist answers every call, books appointments on
                 your calendar, and responds to customers instantly — even when
                 you&rsquo;re with another client.
