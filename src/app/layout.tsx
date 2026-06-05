@@ -19,9 +19,11 @@ const sans = Hanken_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://voice.ai"),
-  title: "Voice.ai Phone — The AI phone carrier for your business",
+  title: "Voice AI - A Phone Plan with a Receptionist",
   description:
-    "Keep your number and get a phone plan with an AI receptionist built in — every call screened, answered, summarized, and booked. Built for small businesses that can't afford to miss a lead.",
+    "Get a mobile phone plan with an AI voice receptionist built in. Answer missed calls, screen spam, take messages, and follow up from your real number.",
+  // Pre-launch: keep this out of search results.
+  robots: { index: false, follow: false },
   keywords: [
     "AI phone carrier",
     "AI receptionist",
@@ -31,17 +33,17 @@ export const metadata: Metadata = {
     "Voice.ai Phone",
   ],
   openGraph: {
-    title: "Voice.ai Phone — The AI phone carrier for your business",
+    title: "Voice AI - A Phone Plan with a Receptionist",
     description:
-      "A phone plan with an AI receptionist built in — every business call screened, answered, summarized, and booked. Keep your number.",
+      "Get a mobile phone plan with an AI voice receptionist built in. Answer missed calls, screen spam, take messages, and follow up from your real number.",
     type: "website",
     siteName: "Voice.ai Phone",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Voice.ai Phone — The AI phone carrier for your business",
+    title: "Voice AI - A Phone Plan with a Receptionist",
     description:
-      "A phone plan with an AI receptionist built in — every business call answered, summarized, and booked.",
+      "Get a mobile phone plan with an AI voice receptionist built in. Answer missed calls, screen spam, take messages, and follow up from your real number.",
   },
 };
 
