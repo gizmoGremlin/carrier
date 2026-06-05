@@ -17,9 +17,9 @@ const steps = [
     key: "answer",
     label: "Answer",
     icon: PhoneIcon,
-    title: "Your AI answers first, in your voice",
+    title: "Your line answers first, in your voice",
     body: "Can&rsquo;t pick up? Your virtual receptionist greets the caller, finds out what they need, and books appointments or takes a message — so you only deal with calls that matter.",
-    points: ["Natural AI voice", "Books appointments", "Takes detailed messages"],
+    points: ["A natural voice", "Books appointments", "Takes detailed messages"],
   },
   {
     key: "summary",

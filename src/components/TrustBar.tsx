@@ -4,7 +4,7 @@ const stats = [
   { value: "3+ hrs", label: "saved every week" },
   { value: "100%", label: "of calls answered" },
   { value: "0", label: "spam interruptions" },
-  { value: "24/7", label: "AI on the line" },
+  { value: "24/7", label: "always on the line" },
 ];
 
 export function TrustBar() {

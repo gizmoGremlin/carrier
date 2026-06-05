@@ -25,25 +25,25 @@ const plans: Plan[] = [
     cta: "Start free trial",
     features: [
       "Unlimited talk & text (US & CA)",
-      "AI spam blocking",
+      "Automatic spam blocking",
       "Call screening for unknown numbers",
       "Voicemail summaries",
     ],
   },
   {
     name: "Pro",
-    blurb: "The full AI receptionist for everyday life.",
+    blurb: "Your always-on receptionist for everyday life.",
     monthly: 29,
     yearly: 23,
     featured: true,
     cta: "Start free trial",
     features: [
       "Everything in Lite",
-      "AI answers every call, 24/7",
+      "Every call answered, 24/7",
       "Summaries + full transcripts",
-      "Search any conversation with AI",
+      "Search any past conversation",
       "Note-taking on live calls",
-      "A second AI phone number",
+      "A second phone number",
     ],
   },
   {
@@ -74,7 +74,7 @@ export function Pricing() {
             A carrier plan that pays for itself
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-center text-xl text-muted">
-            Less than most phone bills — with an AI assistant built in. Keep
+            Less than most phone bills — with an assistant built in. Keep
             your number, cancel anytime.
           </p>
         </Reveal>

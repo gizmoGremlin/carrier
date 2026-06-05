@@ -24,7 +24,7 @@ export function Footer() {
           <div>
             <Wordmark />
             <p className="mt-4 max-w-xs text-base leading-snug text-muted">
-              The first AI-native phone carrier. Spam blocked, calls answered,
+              The carrier that picks up for you. Spam blocked, calls answered,
               every conversation summarized — for less than you pay today.
             </p>
             <div className="mt-5 flex gap-3">

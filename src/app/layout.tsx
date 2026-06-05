@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://voice.ai"),
   title: "Voice.ai Phone — The carrier that thinks for you",
   description:
-    "Switch to an AI-first phone plan that screens, answers, and summarizes every call for you — and costs less than your carrier today.",
+    "Switch to a phone plan that screens, answers, and summarizes every call for you — for less than your carrier today.",
   keywords: [
     "AI carrier",
     "AI phone plan",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Voice.ai Phone — The carrier that thinks for you",
     description:
-      "An AI-first phone plan that screens, answers, and summarizes every call. Less than you pay today.",
+      "A phone plan that screens, answers, and summarizes every call. Less than you pay today.",
     type: "website",
     siteName: "Voice.ai Phone",
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Voice.ai Phone — The carrier that thinks for you",
     description:
-      "An AI-first phone plan that screens, answers, and summarizes every call.",
+      "A phone plan that screens, answers, and summarizes every call.",
   },
 };
 

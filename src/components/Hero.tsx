@@ -9,7 +9,7 @@ const chips = [
   "Screening",
   "Calls",
   "Voice Agent",
-  "AI Notes",
+  "Notes",
   "Voicemail",
   "Reminders",
   "Call Log",
@@ -48,7 +48,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-pill border border-line bg-cloud/70 px-3.5 py-1.5 text-sm font-medium text-ink-soft"
           >
             <span className="flex h-1.5 w-1.5 rounded-full bg-brand" />
-            The first AI-native phone carrier
+            The first carrier that answers for you
             <Arrow className="h-3.5 w-3.5 text-muted" />
           </motion.a>
 
@@ -86,9 +86,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.12 }}
             className="mx-auto mt-7 max-w-xl text-2xl leading-snug text-muted lg:mx-0"
           >
-            Switch to an AI-first phone plan that screens, answers, and
-            summarizes every call for you — and works harder than any carrier
-            ever has, for{" "}
+            Switch to a phone plan that screens, answers, and summarizes every
+            call for you — and works harder than any carrier ever has, for{" "}
             <span className="font-semibold text-ink">less than you pay today.</span>
           </motion.p>
 

@@ -45,7 +45,7 @@ export function UseCases() {
               </h3>
               <p className="mt-3 text-xl leading-snug text-muted">
                 Stop spam, screen the unknown, and handle calls on your schedule.
-                Your AI keeps you on top of follow-ups so you never drop a thread.
+                It keeps you on top of follow-ups so you never drop a thread.
               </p>
               <ul className="mt-7 space-y-3">
                 {personalPoints.map((p) => (
@@ -86,7 +86,7 @@ export function UseCases() {
                 Never lose a lead again
               </h3>
               <p className="relative mt-3 text-xl leading-snug text-white/70">
-                Your AI receptionist answers every call, books appointments on
+                A receptionist answers every call, books appointments on
                 your calendar, and responds to customers instantly — even when
                 you&rsquo;re with another client.
               </p>

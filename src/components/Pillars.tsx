@@ -60,7 +60,7 @@ export function Pillars() {
                 Blocks spam before it rings
               </h3>
               <p className="relative mt-3 max-w-sm leading-snug text-white/70">
-                Our AI screens and handles spam callers automatically — your
+                Spam callers are screened and handled automatically — your
                 phone stays silent so you stay focused.
               </p>
 

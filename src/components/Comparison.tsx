@@ -14,7 +14,7 @@ const withAi = [
   "Answer in popular voices, automatically",
   "Save 3+ hours every single day",
   "Spam blocked before it reaches you",
-  "AI answers every call, 24/7",
+  "Every call answered, 24/7",
   "Summary + transcript for every call",
   "Auto-booked appointments & reminders",
 ];
@@ -32,7 +32,7 @@ export function Comparison() {
               Your phone, before and after Voice.ai Phone
             </h2>
             <p className="mt-5 max-w-lg text-xl text-muted">
-              The same day on the line — with and without an AI answering for you.
+              The same day on the line — with and without a carrier that answers for you.
             </p>
           </div>
         </Reveal>
