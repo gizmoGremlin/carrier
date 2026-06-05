@@ -33,7 +33,7 @@
 
 html {
   /* Scales every rem-based size up uniformly — keeps the type ratios, just bigger. */
-  font-size: 120%;
+  font-size: 115%;
   scroll-behavior: smooth;
 }
 
