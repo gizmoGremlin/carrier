@@ -10,7 +10,7 @@ import {
 } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Arrow, Check, WaveMark, X } from "./icons";
-import { trackPixel } from "./MetaPixel";
+import { trackPixel, trackPixelCustom } from "./MetaPixel";
 
 type Ctx = { open: () => void };
 const WaitlistCtx = createContext<Ctx | null>(null);
@@ -23,7 +23,10 @@ export function useWaitlist() {
 
 export function WaitlistProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
-  const open = useCallback(() => setIsOpen(true), []);
+  const open = useCallback(() => {
+    setIsOpen(true);
+    trackPixelCustom("FormOpened", { content_name: "Get started form" });
+  }, []);
   const close = useCallback(() => setIsOpen(false), []);
 
   return (

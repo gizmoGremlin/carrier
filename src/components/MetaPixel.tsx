@@ -33,9 +33,20 @@ fbq('track', 'PageView');`}
   );
 }
 
+function getFbq() {
+  if (typeof window === "undefined") return undefined;
+  return (window as unknown as { fbq?: (...a: unknown[]) => void }).fbq;
+}
+
 /** Fire a standard Meta Pixel event (e.g. "Lead") if the pixel is loaded. */
 export function trackPixel(event: string, params?: Record<string, unknown>) {
-  if (typeof window === "undefined") return;
-  const fbq = (window as unknown as { fbq?: (...a: unknown[]) => void }).fbq;
-  if (fbq) fbq("track", event, params);
+  getFbq()?.("track", event, params);
+}
+
+/** Fire a custom Meta Pixel event (e.g. "FormOpened") if the pixel is loaded. */
+export function trackPixelCustom(
+  event: string,
+  params?: Record<string, unknown>,
+) {
+  getFbq()?.("trackCustom", event, params);
 }
