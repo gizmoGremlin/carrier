@@ -18,7 +18,7 @@ const sans = Hanken_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://voice.ai"),
-  title: "Voice.ai Phone — The carrier that handles it",
+  title: "Voice.ai Phone — Spam blocked. Calls answered.",
   description:
     "Switch to a phone plan that screens, answers, and summarizes every call for you — for less than your carrier today.",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Voice.ai Phone",
   ],
   openGraph: {
-    title: "Voice.ai Phone — The carrier that handles it",
+    title: "Voice.ai Phone — Spam blocked. Calls answered.",
     description:
       "A phone plan that screens, answers, and summarizes every call. Less than you pay today.",
     type: "website",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Voice.ai Phone — The carrier that handles it",
+    title: "Voice.ai Phone — Spam blocked. Calls answered.",
     description:
       "A phone plan that screens, answers, and summarizes every call.",
   },

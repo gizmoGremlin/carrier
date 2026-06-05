@@ -48,7 +48,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-pill border border-line bg-cloud/70 px-3.5 py-1.5 text-sm font-medium text-ink-soft"
           >
             <span className="flex h-1.5 w-1.5 rounded-full bg-brand" />
-            The first carrier that answers for you
+            A mobile carrier that picks up for you
             <Arrow className="h-3.5 w-3.5 text-muted" />
           </motion.a>
 
@@ -56,12 +56,12 @@ export function Hero() {
             initial={reduce ? false : { opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.05 }}
-            className="display mt-6 text-[2.6rem] sm:text-6xl lg:text-[4.5rem]"
+            className="display mt-6 text-[2.6rem] sm:text-6xl lg:text-[4.6rem]"
           >
-            The carrier that
+            Spam blocked.
             <br />
             <span className="relative inline-block italic text-brand">
-              handles it.
+              Calls answered.
               <svg
                 className="absolute -bottom-2 left-0 w-full"
                 viewBox="0 0 300 12"
@@ -85,9 +85,11 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.12 }}
             className="mx-auto mt-7 max-w-xl text-2xl leading-snug text-muted lg:mx-0"
           >
-            Switch to a phone plan that screens, answers, and summarizes every
-            call for you — and works harder than any carrier ever has, for{" "}
-            <span className="font-semibold text-ink">less than you pay today.</span>
+            A mobile plan that screens spam, answers the calls you miss, books
+            your appointments, and summarizes every call.{" "}
+            <span className="font-semibold text-ink">
+              Keep your number, pay less than today.
+            </span>
           </motion.p>
 
           <motion.div
