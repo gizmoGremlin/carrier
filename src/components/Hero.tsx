@@ -48,7 +48,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-pill border border-line bg-cloud/70 px-3.5 py-1.5 text-sm font-medium text-ink-soft"
           >
             <span className="flex h-1.5 w-1.5 rounded-full bg-brand" />
-            A mobile carrier that picks up for you
+            Built for small businesses that can&rsquo;t miss a lead
             <Arrow className="h-3.5 w-3.5 text-muted" />
           </motion.a>
 
@@ -56,12 +56,11 @@ export function Hero() {
             initial={reduce ? false : { opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.05 }}
-            className="display mt-6 text-[2.6rem] sm:text-6xl lg:text-[4.6rem]"
+            className="display mt-6 text-[2.2rem] sm:text-5xl lg:text-[3.6rem]"
           >
-            Spam blocked.
-            <br />
+            The AI phone carrier that answers your{" "}
             <span className="relative inline-block italic text-brand">
-              Calls answered.
+              business calls.
               <svg
                 className="absolute -bottom-2 left-0 w-full"
                 viewBox="0 0 300 12"
@@ -83,13 +82,14 @@ export function Hero() {
             initial={reduce ? false : { opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.12 }}
-            className="mx-auto mt-7 max-w-xl text-2xl leading-snug text-muted lg:mx-0"
+            className="mx-auto mt-6 max-w-xl text-xl leading-snug text-muted lg:mx-0"
           >
-            A mobile plan that screens spam, answers the calls you miss, books
-            your appointments, and summarizes every call.{" "}
+            Keep your number and get a phone plan with an AI receptionist built
+            in — so every call is{" "}
             <span className="font-semibold text-ink">
-              Keep your number, pay less than today.
-            </span>
+              screened, answered, summarized, and booked
+            </span>{" "}
+            automatically.
           </motion.p>
 
           <motion.div
