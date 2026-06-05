@@ -10,6 +10,7 @@ import {
 } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Arrow, Check, WaveMark, X } from "./icons";
+import { trackPixel } from "./MetaPixel";
 
 type Ctx = { open: () => void };
 const WaitlistCtx = createContext<Ctx | null>(null);
@@ -105,6 +106,7 @@ function WaitlistModal({
         setStatus("idle");
         return;
       }
+      trackPixel("Lead", { content_name: "Get started form" });
       setStatus("done");
     } catch {
       setError("Network error. Please try again.");
