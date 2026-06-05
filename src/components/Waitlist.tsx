@@ -58,6 +58,7 @@ function WaitlistModal({
 }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
   const [error, setError] = useState<string | null>(null);
 
@@ -82,6 +83,7 @@ function WaitlistModal({
       setError(null);
       setName("");
       setEmail("");
+      setPhone("");
     }, 300);
     return () => window.clearTimeout(id);
   }, [isOpen]);
@@ -95,7 +97,7 @@ function WaitlistModal({
       const res = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email }),
+        body: JSON.stringify({ name, email, phone }),
       });
       const data = (await res.json()) as { ok: boolean; error?: string };
       if (!res.ok || !data.ok) {
@@ -130,7 +132,7 @@ function WaitlistModal({
           <motion.div
             role="dialog"
             aria-modal="true"
-            aria-label="Get early access"
+            aria-label="Get started"
             className="relative w-full max-w-md overflow-hidden rounded-3xl border border-line bg-white p-7 shadow-[0_40px_90px_-30px_rgba(8,12,40,0.5)] sm:p-8"
             initial={{ opacity: 0, scale: 0.95, y: 16 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -151,11 +153,11 @@ function WaitlistModal({
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-brand/10">
                   <Check className="h-7 w-7 text-brand" />
                 </div>
-                <h2 className="display-sm mt-5 text-2xl">You&rsquo;re on the list.</h2>
+                <h2 className="display-sm mt-5 text-2xl">You&rsquo;re all set.</h2>
                 <p className="mx-auto mt-2 max-w-xs text-muted">
-                  Thanks{name ? `, ${name.split(" ")[0]}` : ""}! We&rsquo;ll email{" "}
-                  <span className="font-semibold text-ink">{email}</span> the
-                  moment early access opens.
+                  Thanks{name ? `, ${name.split(" ")[0]}` : ""}! We&rsquo;ll reach
+                  out at <span className="font-semibold text-ink">{email}</span>{" "}
+                  to get you set up.
                 </p>
                 <button
                   type="button"
@@ -168,14 +170,14 @@ function WaitlistModal({
             ) : (
               <>
                 <span className="inline-flex items-center gap-2 rounded-pill border border-line bg-cloud/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-brand">
-                  <WaveMark className="h-3.5 w-3.5" /> Early access
+                  <WaveMark className="h-3.5 w-3.5" /> Get started
                 </span>
                 <h2 className="display-sm mt-4 text-2xl sm:text-3xl">
-                  Get early access
+                  Switch in minutes
                 </h2>
                 <p className="mt-2 text-muted">
-                  Be among the first to switch to the carrier that thinks. Keep
-                  your number — we&rsquo;ll be in touch.
+                  Drop your details and we&rsquo;ll reach out to get you set up
+                  on the carrier that thinks — keep your number.
                 </p>
 
                 <form onSubmit={submit} className="mt-6 space-y-3">
@@ -209,6 +211,21 @@ function WaitlistModal({
                       className="w-full rounded-2xl border border-line bg-cloud-2 px-4 py-3 text-ink outline-none transition-colors placeholder:text-muted focus:border-brand focus:bg-white focus:ring-2 focus:ring-brand/15"
                     />
                   </div>
+                  <div>
+                    <label htmlFor="wl-phone" className="sr-only">
+                      Phone number
+                    </label>
+                    <input
+                      id="wl-phone"
+                      type="tel"
+                      autoComplete="tel"
+                      required
+                      value={phone}
+                      onChange={(ev) => setPhone(ev.target.value)}
+                      placeholder="Phone number"
+                      className="w-full rounded-2xl border border-line bg-cloud-2 px-4 py-3 text-ink outline-none transition-colors placeholder:text-muted focus:border-brand focus:bg-white focus:ring-2 focus:ring-brand/15"
+                    />
+                  </div>
 
                   {error && (
                     <p className="text-sm font-medium text-coral">{error}</p>
@@ -220,17 +237,17 @@ function WaitlistModal({
                     className="group inline-flex w-full items-center justify-center gap-2 rounded-pill bg-ink px-7 py-3.5 text-base font-semibold text-white transition-transform hover:scale-[1.02] active:scale-95 disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     {status === "sending" ? (
-                      "Joining…"
+                      "Getting started…"
                     ) : (
                       <>
-                        Request early access
+                        Get started
                         <Arrow className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                       </>
                     )}
                   </button>
                 </form>
                 <p className="mt-3 text-center text-xs text-muted">
-                  No spam. We&rsquo;ll only email you about early access.
+                  No spam. We&rsquo;ll only reach out about getting you set up.
                 </p>
               </>
             )}

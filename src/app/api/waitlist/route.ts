@@ -30,9 +30,10 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const { name, email } = (body ?? {}) as Record<string, unknown>;
+  const { name, email, phone } = (body ?? {}) as Record<string, unknown>;
   const n = typeof name === "string" ? name.trim() : "";
   const e = typeof email === "string" ? email.trim() : "";
+  const p = typeof phone === "string" ? phone.trim() : "";
 
   if (!n) {
     return NextResponse.json(
@@ -46,7 +47,15 @@ export async function POST(request: NextRequest) {
       { status: 400 },
     );
   }
-  if (n.length > 120 || e.length > 200) {
+  // Loose phone check — at least 7 digits, allowing +, spaces, (), -.
+  const digits = p.replace(/[^\d]/g, "");
+  if (digits.length < 7) {
+    return NextResponse.json(
+      { ok: false, error: "A valid phone number is required." },
+      { status: 400 },
+    );
+  }
+  if (n.length > 120 || e.length > 200 || p.length > 40) {
     return NextResponse.json(
       { ok: false, error: "Input too long." },
       { status: 400 },
@@ -57,7 +66,7 @@ export async function POST(request: NextRequest) {
   // flow is testable, but never silently drop them in production.
   if (!RESEND_API_KEY || !CONTACT_EMAIL) {
     if (process.env.NODE_ENV !== "production") {
-      console.log("[waitlist] (dev · email not configured) signup:", { n, e });
+      console.log("[waitlist] (dev · email not configured) signup:", { n, e, p });
       return NextResponse.json({ ok: true });
     }
     return NextResponse.json(
@@ -73,16 +82,18 @@ export async function POST(request: NextRequest) {
       from: FROM_ADDRESS,
       to: [CONTACT_EMAIL],
       replyTo: e,
-      subject: `Early-access signup — ${n}`,
-      text: `New Voice.ai Phone early-access signup
+      subject: `New signup — ${n}`,
+      text: `New Voice.ai Phone signup
 
 Name:  ${n}
 Email: ${e}
+Phone: ${p}
 `,
       html: `<div style="font-family: ui-sans-serif, system-ui, -apple-system, Helvetica, Arial; color:#0a0a0b; line-height:1.55;">
-  <h2 style="margin:0 0 12px;font-size:18px;">New early-access signup</h2>
+  <h2 style="margin:0 0 12px;font-size:18px;">New signup</h2>
   <p style="margin:0 0 6px;"><strong>Name:</strong> ${escapeHtml(n)}</p>
   <p style="margin:0 0 6px;"><strong>Email:</strong> ${escapeHtml(e)}</p>
+  <p style="margin:0 0 6px;"><strong>Phone:</strong> ${escapeHtml(p)}</p>
 </div>`,
     });
     if (result.error) {

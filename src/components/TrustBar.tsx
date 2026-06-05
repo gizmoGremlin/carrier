@@ -13,7 +13,7 @@ export function TrustBar() {
       <div className="mx-auto max-w-6xl px-5 py-10">
         <Reveal>
           <p className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-            Now in early access · Keep your number, switch in minutes
+            Keep your number · switch in minutes · cancel anytime
           </p>
         </Reveal>
         <div className="mt-8 grid grid-cols-2 gap-6 md:grid-cols-4">
