@@ -16,6 +16,11 @@ const groups = [
   },
 ];
 
+// Links that point to a real page (others are placeholders for now).
+const hrefs: Record<string, string> = {
+  Terms: "/terms-and-conditions",
+};
+
 export function Footer() {
   return (
     <footer className="border-t border-line bg-white px-5 py-14">
@@ -41,7 +46,7 @@ export function Footer() {
                 {g.links.map((l) => (
                   <li key={l}>
                     <a
-                      href="#"
+                      href={hrefs[l] ?? "#"}
                       className="text-base text-muted transition-colors hover:text-ink"
                     >
                       {l}

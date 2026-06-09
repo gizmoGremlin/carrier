@@ -1,6 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async rewrites() {
+    return [
+      // Clean URL for the static Terms & Conditions page (public/terms-and-conditions.html).
+      { source: "/terms-and-conditions", destination: "/terms-and-conditions.html" },
+    ];
+  },
   async headers() {
     return [
       {
